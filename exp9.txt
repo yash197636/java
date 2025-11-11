@@ -1,0 +1,25 @@
+clc;
+clear;
+n= insut( Enter the codeword lengthin LBC(n):);
+k= input('Enter the number of message bits in LBC (m):);
+p= input('Enter the parity check matrix ');g=[eye(k,k)pl;
+disp('Generator matrix', g);
+d= [00 0;001;010;011; 100;101; 110;111]c= modulo(d*g, 2);
+disp('all codewords', c);Hw= zeros(2^k, 1);
+fori=1:2^k
+wt = 0;
+for j=1:n
+if c(i, i) == 1 then
+wt=wt+1;
+end
+end
+Hw(i)=wt;
+end
+y= [c, Hw];
+disp('code vector with hamming weight',y);dmin = Hw(2);
+fori=2:2k
+if dmin > Hw(i) then
+dmin = Hw(i);
+end
+end
+disp('Minimum Hamming Distance is', dmin);td = dmin-1;

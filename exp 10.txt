@@ -1,0 +1,21 @@
+clc;
+clear;
+exec('C:iscilab_projectsluser defined functionsldeconv.sc');n= input( Enter the length of codeword:);
+k= input('Enter the length of message:);
+gen_coff = input('Enter the generator coefficient :);m= input('Enter the message:);
+y2=[1);
+a= zeros(1, n - k);21=[y2 al;
+x= conv(21, m);
+x1= pmodulo(x, 2);
+[9, 11= deconv(x1, gen_coff);
+r1=[zeros(1, length(x1) -length(r),n;
+codeword = bitxor(x1, 1);//codeword=(x1&r1)1(x1&r1);disp('CYCLIC CODEWORD=',codeword*1);
+rec= input('Enter the received codeword:);[q, 门=deconv(rec, gen_coff);
+syn = pmodulo(r, 2);
+disp('Syndrome for received codeword is:’, syn);
+if syn == 0 then
+disp('No error in received code, No need of correction');
+else
+disp('Non zero syndrome indicates Error in received code');syn =[zeros(1, length(x1) -length(syn), syn);
+y2 = zeros(n, n);e= eye(n, n);fori=1:n
+[c, r)=deconv(eli,:i), gen_coff);r1=[zeros(1, n-length(1).);Y2(i,:)= pmodulo(r1, 2);

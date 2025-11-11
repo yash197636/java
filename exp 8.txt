@@ -1,0 +1,29 @@
+clc;
+clear all;
+PXY=input(enter joint probability matrix ):[m.nl-size(P_XY);
+fori=1:m
+PX(i)=0;
+forj=1:n
+px(i)FpX(i)+P_XY(ij);
+end
+end
+disp(P(X)matrix is:)disp(px);
+hx=sum(-px.*log2(px));
+disp(Input entropy H(X) is:)disp(hx);
+fori=l:n
+py(i)=0;
+forj=]:m
+py(i)Fpy(i)+P_XY(G, );
+end
+end
+disp(P(Y) matrix is:)disp(py);
+hy-sum(-py.*log2(py));
+disp('Output entropy H(Y)is:)disp(hy);
+h_xy=0;
+fori=1:m
+forj=1:n
+h xy-h_ xytP_XY(ij)*log2(1/P_XYC));
+end
+disp( Entropy H(XY)is:)disp(h_xy);
+hxby=h_xy-hy;hybx=h_xy-hx;ixy-hxthy-h_xy;
+disp(Mutual Information I(X, Y)is:)disp(ixy);

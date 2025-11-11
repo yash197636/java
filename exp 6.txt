@@ -1,0 +1,15 @@
+clc;
+clear;
+close;
+exec('C:lscilab_projectsluser defined functionslpskmod.sci');exec('C:Iscilab_projectsluser defined functionslgammod.sci');N=4; //number of bits to be grouped
+M=21N;
+x=0:M 1;
+7.= pskmod(x, M);
+scf(); // create a new figure subplot(1, 2, 1);
+scatter(real(2), imag(2), "6l/");h= gca(); // get current axes
+h.data bounds = [-1.5, 1.5, 1.5, 1.5];//adjust axes boundries as per need xtitle('M-ary PSK', 'In-phase', 'Quadrature');
+y=gammod(x, M);subplot(1, 2, 2);
+scatter(real(ly), imag(y), "6il");
+h=gca();
+h.data_bounds=1:3.5, 3.5, 3.5, 3.5);
+xtitle('M-QAM', In-phase', 'Quadrature);
